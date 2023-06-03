@@ -67,13 +67,17 @@ Batch : 53rd
           </li>
           <?php
           // Check if user is logged in (you should have your own authentication logic here)
-          $isLoggedIn = false; // Set to true if user is logged in
+          session_start();
           
-          if ($isLoggedIn) {
+          if (isset($_SESSION["isLoggedIn"]) == true) {
+            $_userName = $_SESSION["firstName"];
             // Display "Profile" instead of "Login" and "Register" if user is logged in
             echo '
             <li class="nav-item">
-              <a class="nav-link" href="profile.php">Profile</a>
+              <a class="nav-link" href="profile.php"> '. $_userName .'</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="log_out_action.php">Log Out</a>
             </li>
           ';
           } else {
@@ -103,20 +107,7 @@ Batch : 53rd
   <div class="container" id = "product">
     <h1 class="text-center" style="margin-top:30px;">PRODUCTS</h1>
     <?php
-    // Assuming you have a MySQL connection established
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "db_shop";
-
-    // Create a connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check the connection
-    if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }
-
+    include "config.php";
     // Fetch product data from the database
     $sql = "SELECT * FROM crud";
     $result = $conn->query($sql);
@@ -146,7 +137,7 @@ Batch : 53rd
                 <i class='bx bxs-star checked'></i>
               </div>
               <div id="btn2">
-                <button>Add Cart</button>
+              <a href="cart.php">Add to Cart</a>
               </div>
             </div>
           </div>

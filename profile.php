@@ -1,11 +1,3 @@
-<?php 
-
-	require 'config.php';
-
-
-	$row = db_query("select * from users where id = :id limit 1",['id'=>$id]);
-
-?>
 
 
 <!DOCTYPE html>
@@ -46,43 +38,44 @@
     </div>
   </nav>
 
-<?php if(!empty($row)):?>
+
     <div class="row col-lg-8 border rounded mx-auto mt-5 p-2 shadow-lg">
         <div class="col-md-4 text-center">
-            <img src="" class="img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
+            <img src="img\arrow.png" class="img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
             <div>
 
-                <?php if(user('id') == $row['id']):?>
-
                     <a href="profile-edit.php">
-                        <button class="mx-auto m-1 btn-sm btn btn-primary">Edit</button>
+                        <button class="mx-auto m-1 btn-sm btn btn-primary">Edit Info</button>
                     </a>
-                    <a href="profile-delete.php">
+                    <!-- <a href="profile-delete.php">
                         <button class="mx-auto m-1 btn-sm btn btn-warning text-white">Delete</button>
-                    </a>
-                    <a href="logout.php">
+                    </a> -->
+                    <a href="log_out_action.php">
                         <button class="mx-auto m-1 btn-sm btn btn-info text-white">Logout</button>
                     </a>
-                <?php endif;?>
+
             </div>
         </div>
         <div class="col-md-8">
             <div class="h2">User Profile</div>
             <table class="table table-striped">
                 <tr><th colspan="2">User Details:</th></tr>
-                <tr><th><i class="bi bi-envelope"></i> Email</th><td><?=esc($row['email'])?></td></tr>
-                <tr><th><i class="bi bi-person-circle"></i> First name</th><td><?=esc($row['firstname'])?></td></tr>
-                <tr><th><i class="bi bi-person-square"></i> Last name</th><td><?=esc($row['lastname'])?></td></tr>
-                <tr><th><i class="bi bi-gender-ambiguous"></i> Gender</th><td><?=esc($row['gender'])?></td></tr>
+                <?php 
+                session_start();
+                $_userName = $_SESSION["firstName"];
+                echo '
+                <tr><th><i class="bi bi-envelope"></i> First Name</th><td>'.$_SESSION["firstName"].'</td></tr>
+                <tr><th><i class="bi bi-person-circle"></i> Last Name </th><td>'.$_SESSION["lastName"].'</td></tr>
+                <tr><th><i class="bi bi-person-square"></i> Phone Number </th><td>'.$_SESSION["phone"].'</td></tr>
+                <tr><th><i class="bi bi-gender-ambiguous"></i> Email </th><td>'.$_SESSION["email"].'</td></tr>
+                <tr><th><i class="bi bi-gender-ambiguous"></i> Address</th><td>'.$_SESSION["address"].'</td></tr>  
+                <tr><th><i class="bi bi-gender-ambiguous"></i> User Name </th><td>'.$_SESSION["userName"].'</td></tr>    
+                '
+                ?>
+                
             </table>
         </div>
     </div>
-<?php else:?>
-    <div class="text-center alert alert-danger">That profile was not found</div>
-    <a href="index.php">
-        <button class="btn btn-primary m-4">Home</button>
-    </a>
-<?php endif;?>
 
 </body>
 

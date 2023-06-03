@@ -108,6 +108,10 @@
 
 
 
+
+
+
+
 .banner {
   width: 100%;
   height: 40vh;
@@ -121,124 +125,13 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 100px;
   font-family: 'Tiro Devanagari Marathi', serif;
 }
 
 .banner-content h1 {
   color: black;
 }
-
-.change-content:after {
-  content: '';
-  color: #0e7C61;
-  text-shadow: 2px 1px 5px black;
-  font-weight: bold;
-  animation: changetext 10s infinite linear;
-}
-
-@keyframes changetext {
-  0% {
-    content: "T SHIRT";
-  }
-
-  10% {
-    content: "SHOES";
-  }
-
-  20% {
-    content: "HOODIS";
-  }
-
-  30% {
-    content: "CAP";
-  }
-
-  40% {
-    content: "PANTS";
-  }
-
-  50% {
-    content: "LAPTOP";
-  }
-
-  60% {
-    content: "KEYBOARD";
-  }
-
-  65% {
-    content: "CAMERAS";
-  }
-
-  75% {
-    content: "COMPUTER MOUSE";
-  }
-
-  80% {
-    content: "GAMING PC";
-  }
-
-  85% {
-    content: "WATCH";
-  }
-
-  90% {
-    content: "IPAD & TABLETS";
-  }
-
-  100% {
-    content: "HEADPHONES";
-  }
-}
-
-
-.search-box {
-  position: absolute;
-  margin-top: 50px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #353b48;
-  height: 60px;
-  border-radius: 50px;
-  padding: 10px;
-}
-
-.search-box:hover .search-txt {
-  width: 100px;
-  padding: 0 6px;
-}
-
-.search-box:hover .search-btn {
-  background: #0e7C61;
-}
-
-
-.search-btn {
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #0e7C61;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.search-txt {
-  border: none;
-  outline: none;
-  background: none;
-  float: left;
-  padding: 0;
-  color: #fff;
-  font-size: 16px;
-  line-height: 40px;
-  width: 0;
-  transition: width 400ms;
-
-}
-
 
 .card {
   box-shadow: 0 0 5px black;
@@ -298,22 +191,6 @@
 #slider {
   margin-top: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

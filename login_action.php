@@ -1,21 +1,39 @@
 <?php
+include "config.php";
 session_start();
 
-// Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  // Get the submitted username and password
-  $username = $_POST['username'];
-  $password = $_POST['password'];
 
-  // Check if the username and password are correct (you should replace this with your own authentication logic)
-  if ($username === 'admin' && $password === 'password') {
-    // Authentication successful
-    $_SESSION['isLoggedIn'] = true;
-    header('Location: profile.php'); // Redirect to the profile page or any other page
-    exit;
+if (isset($_POST['login'])) {
+
+  $r_username = $_POST['r_userName'];
+  $r_pass = $_POST['r_pass'];
+
+  // Prepare the query to prevent SQL injection
+  $stmt = $conn->prepare("SELECT * FROM userbase WHERE userName = ? AND pass = ?");
+  $stmt->bind_param("ss", $r_username, $r_pass);
+  $stmt->execute();
+  $result = $stmt->get_result();
+
+  if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    // Login successful
+    $_SESSION["isLoggedIn"] = true;
+    $_SESSION["firstName"] = $row["firstName"];
+    $_SESSION["lastName"] = $row["lastName"];
+    $_SESSION["userName"] = $row["userName"];
+    $_SESSION["phone"] = $row["mobile"];
+    $_SESSION["email"] =  $row["email"];
+    $_SESSION["address"] = $row["address"];
+    
+    
+    header("Location: index.php");
   } else {
-    // Authentication failed
-    $errorMessage = 'Invalid username or password';
+    // Login failed
+    echo "Invalid email or password.";
   }
+
+  $stmt->close();
+
 }
+
 ?>
