@@ -1,0 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.rsc {
+  display: flex;
+}
+
+#btn3 {
+  width: 100px;
+  height: 36px;
+  background-color: #0e7C61;
+  border: none;
+}
+
+#btn3 a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+
+}
+
+.icons {
+  margin-left: 10px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.icons i {
+  margin-left: 5px;
+}
+
+#navbar-color {
+  background-color: #0e7C61;
+}
+
+#navbar-logo i img {
+  width: 30px;
+  margin-bottom: 7px;
+  margin-right: 10px;
+}
+
+#navbar-logo {
+  font-size: 35px;
+  font-family: 'Tiro Devanagari Marathi', serif;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 1px 5px black;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.nav-link:hover {
+  color: white;
+  text-shadow: 2px 1px 5px black;
+}
+
+.new-icons {
+  cursor: pointer;
+}
+
+.hc {
+  background-color: rgb(58 57 57 / 87%);
+}
+
+.content {
+  width: 50%;
+  padding-top: 210px;
+  margin-left: 20px;
+}
+
+.content h1 {
+  color: white;
+  text-shadow: 2px 1px 5px black;
+}
+
+.content p {
+  color: white;
+  text-shadow: 2px 1px 5px black;
+}
+
+#btn1 button {
+  width: 200px;
+  height: 32px;
+  background-color: #0e7C61;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#btn1 {
+  margin-top: 5px;
+}
+
+#btn1 button:hover {
+  background-color: #0e7C61;
+  box-shadow: 0 0 5px #0e7C61,
+    0 0 20px #0e7C61,
+    0 0 60px #0e7C61,
+    0 0 150px #0e7C61;
+}
+
+
+
+.banner {
+  width: 100%;
+  height: 40vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70%;
+}
+
+.banner-content {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 200px;
+  font-family: 'Tiro Devanagari Marathi', serif;
+}
+
+.banner-content h1 {
+  color: black;
+}
+
+.change-content:after {
+  content: '';
+  color: #0e7C61;
+  text-shadow: 2px 1px 5px black;
+  font-weight: bold;
+  animation: changetext 10s infinite linear;
+}
+
+@keyframes changetext {
+  0% {
+    content: "T SHIRT";
+  }
+
+  10% {
+    content: "SHOES";
+  }
+
+  20% {
+    content: "HOODIS";
+  }
+
+  30% {
+    content: "CAP";
+  }
+
+  40% {
+    content: "PANTS";
+  }
+
+  50% {
+    content: "LAPTOP";
+  }
+
+  60% {
+    content: "KEYBOARD";
+  }
+
+  65% {
+    content: "CAMERAS";
+  }
+
+  75% {
+    content: "COMPUTER MOUSE";
+  }
+
+  80% {
+    content: "GAMING PC";
+  }
+
+  85% {
+    content: "WATCH";
+  }
+
+  90% {
+    content: "IPAD & TABLETS";
+  }
+
+  100% {
+    content: "HEADPHONES";
+  }
+}
+
+
+.search-box {
+  position: absolute;
+  margin-top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #353b48;
+  height: 60px;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.search-box:hover .search-txt {
+  width: 100px;
+  padding: 0 6px;
+}
+
+.search-box:hover .search-btn {
+  background: #0e7C61;
+}
+
+
+.search-btn {
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0e7C61;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search-txt {
+  border: none;
+  outline: none;
+  background: none;
+  float: left;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  width: 0;
+  transition: width 400ms;
+
+}
+
+
+.card {
+  box-shadow: 0 0 5px black;
+}
+
+.card h5 {
+  font-weight: bold;
+}
+
+.card p {
+  font-weight: 500;
+}
+
+.checked {
+  color: #0e7C61;
+}
+
+#btn2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#btn2 button {
+  width: 100px;
+  height: 30px;
+  background-color: #0e7C61;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 3px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#btn2 button:hover {
+  background-color: #0e7C61;
+  box-shadow: 0 0 5px #0e7C61,
+    0 0 20px #0e7C61,
+    0 0 60px #0e7C61,
+    0 0 150px #0e7C61;
+}
+
+.all-category {
+  margin-top: 10px;
+  margin-left: 36px;
+}
+
+.all-category button {
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.all-category a {
+  background-color: #0e7C61;
+}
+
+
+#slider {
+  margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.collections {
+  background: #f7f7f7;
+}
+
+.newsletter-w3pvt form {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.newsletter-w3pvt p {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  color: #777;
+  font-weight: 600;
+}
+
+.subscribe-sec input {
+
+  padding: 0.85em 1em;
+  color: #495057;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  border: none;
+  outline: none;
+  letter-spacing: 2px;
+  -moz-box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.btn.subscribe {
+  background: #0e7C61;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  color: #fff;
+  padding: 0.8em 3em;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  font-weight: 600;
+  -moz-box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 3px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.btn.subscribe:hover,
+.btn.shop:hover {
+  opacity: 0.9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.arrow {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+
+}
+
+
+body {
+  background: #eee !important;
+}
+
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 30px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
