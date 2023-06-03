@@ -78,7 +78,7 @@
   </nav>
 
   <div class="login-form">
-    <form action="login_action.php" method="post">
+    <form action="admin_login_action.php" method="post">
       <h2 class="text-center">Log in</h2>
       <div class="form-group">
         <input type="text" class="form-control" name="r_userName" placeholder="Username" required="required">
@@ -89,13 +89,7 @@
       <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block" name="login">Log in</button>
       </div>
-      <p class="text-center"><a href="signUp.php">Create an Account</a></p>
-      <p class="text-center"><a href="admin_login.php">Login As Admin</a></p>
-
-      <!-- <div class="clearfix">
-            <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
-            <a href="#" class="float-right">Forgot Password?</a>
-        </div>         -->
+      <p class="text-center"><a href="login.php">Login As User</a></p>
     </form>
   </div>
 </body>

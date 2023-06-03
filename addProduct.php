@@ -16,17 +16,58 @@
             border-radius: 10px;
         }
     </style>
-    <title>Food Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Panel</title>
 </head>
 
 <body>
+<nav class="navbar navbar-expand-md" id="navbar-color">
+
+<div class="container">
+    <a class="navbar-brand" href="#" id="navbar-logo"><i><img src="img/shop.png" alt=""></i>Easty</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span><i><img src="img/menu.png" alt="" width="30px"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="navbar-nav">
+            <?php
+          session_start();
+          
+          if (isset($_SESSION["isLoggedIn"]) == true) {
+            $_userName = $_SESSION["userName"];
+            echo '
+            <li class="nav-item">
+              <a class="nav-link" href="profile.php"> Logged in as '. $_userName .'</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="log_out_action.php">Log Out</a>
+            </li>
+          ';
+          } else {
+            echo '
+          <li class="nav-item">
+          <a class="nav-link" href="login.php">Login</a>
+        </li>
+          ';
+          }
+          ?>
+        </ul>
+    </div>
+</div>
+</nav>
+
+
     <!-- <h1 class=align-center>CURD</h1> -->
     <div class="container-fluid">
         <div class="row justify-content-center mt-5">
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <form action="insertIntoDB.php" method="post" enctype="multipart/form-data">
                     <div clas="mb-3">
-                        <h3 class="text-center">Add Food:</h3>
+                        <h3 class="text-center">Add Product:</h3>
                     </div>
                     <div class="mb-3">
                         ID:<input type="text" class="form-control" name="id">
@@ -41,7 +82,7 @@
                         Image:<input type="file" class="form-control" name="image">
                     </div>
                     <div class="mb-3">
-                        <input type="submit" class="btn btn-primary col-12" name="addFood" value="Add Food">
+                        <input type="submit" class="btn btn-primary col-12" name="addFood" value="Add Product">
                     </div>
                 </form>
             </div>

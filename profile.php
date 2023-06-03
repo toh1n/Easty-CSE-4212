@@ -41,10 +41,10 @@
 
     <div class="row col-lg-8 border rounded mx-auto mt-5 p-2 shadow-lg">
         <div class="col-md-4 text-center">
-            <img src="img\arrow.png" class="img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
+            <img src="img\user.jpg" class="img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
             <div>
 
-                    <a href="profile-edit.php">
+                    <a href="edit_profile.php">
                         <button class="mx-auto m-1 btn-sm btn btn-primary">Edit Info</button>
                     </a>
                     <!-- <a href="profile-delete.php">
