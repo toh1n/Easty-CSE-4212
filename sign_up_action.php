@@ -1,8 +1,8 @@
 <?php
 include 'config.php';
 if (isset($_POST['signUp'])) {
-    $r_firstName = $_POST['r_firstName '];
-    $r_lastName = $_POST['r_lastName '];
+    $r_firstName = $_POST['r_firstName'];
+    $r_lastName = $_POST['r_lastName'];
     $r_username = $_POST['r_userName'];
     $r_email = $_POST['r_email'];
     $r_pass = $_POST['r_pass'];

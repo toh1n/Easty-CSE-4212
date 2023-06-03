@@ -2,7 +2,7 @@
 session_start();
 
 // Check if the form is submitted
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Get the submitted username and password
   $username = $_POST['username'];
   $password = $_POST['password'];
@@ -17,5 +17,5 @@ session_start();
     // Authentication failed
     $errorMessage = 'Invalid username or password';
   }
-// }
+}
 ?>

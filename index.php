@@ -57,13 +57,13 @@ Batch : 53rd
             <a class="nav-link" href="index.php">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Product</a>
+            <a class="nav-link" href="#product">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php">About Us</a>
+            <a class="nav-link" href="#About">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Contact Us</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
           <?php
           // Check if user is logged in (you should have your own authentication logic here)
@@ -100,7 +100,7 @@ Batch : 53rd
   </div>
 
 
-  <div class="container">
+  <div class="container" id = "product">
     <h1 class="text-center" style="margin-top:30px;">PRODUCTS</h1>
     <?php
     // Assuming you have a MySQL connection established
@@ -183,7 +183,7 @@ Batch : 53rd
     </div>
   </section>
 
-  <div class="container">
+  <div class="container" id="contact">
     <h1>Contact :</h1>
     <div class="row">
       <div class="col-md-6">
@@ -207,7 +207,7 @@ Batch : 53rd
   </div>
 
   <hr>
-  <div class="container">
+  <div class="container" id="About">
     <h1>About Us</h1>
     <p>Welcome to Easty, your one-stop destination for convenient and enjoyable online shopping. 
     With a wide selection of high-quality products, exceptional customer service, 
