@@ -18,8 +18,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* height: 5vh; */
-            /* Optional - adjust the height as needed */
+
         }
 
         body {
