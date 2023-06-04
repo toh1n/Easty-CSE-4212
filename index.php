@@ -74,6 +74,9 @@ Batch : 53rd
             // Display "Profile" instead of "Login" and "Register" if user is logged in
             echo '
             <li class="nav-item">
+              <a class="nav-link" href="cart.php">Cart</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="profile.php"> '. $_userName .'</a>
             </li>
             <li class="nav-item">
@@ -118,6 +121,7 @@ Batch : 53rd
         $image = $row['image'];
         $name = $row['name'];
         $price = $row['price'];
+        $productId =  $row['id'];
         ?>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
@@ -137,7 +141,7 @@ Batch : 53rd
                 <i class='bx bxs-star checked'></i>
               </div>
               <div id="btn2">
-              <a href="cart.php">Add to Cart</a>
+              <a href="add_to_cart.php?product_id=<?php echo $productId; ?>">Add to Cart</a>
               </div>
             </div>
           </div>

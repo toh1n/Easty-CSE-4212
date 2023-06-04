@@ -24,7 +24,7 @@ if (isset($_POST['login'])) {
     $_SESSION["phone"] = $row["mobile"];
     $_SESSION["email"] =  $row["email"];
     $_SESSION["address"] = $row["address"];
-    
+
     
     header("Location: index.php");
   } else {
