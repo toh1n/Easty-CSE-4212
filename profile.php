@@ -47,9 +47,6 @@
                     <a href="edit_profile.php">
                         <button class="mx-auto m-1 btn-sm btn btn-primary">Edit Info</button>
                     </a>
-                    <!-- <a href="profile-delete.php">
-                        <button class="mx-auto m-1 btn-sm btn btn-warning text-white">Delete</button>
-                    </a> -->
                     <a href="log_out_action.php">
                         <button class="mx-auto m-1 btn-sm btn btn-info text-white">Logout</button>
                     </a>

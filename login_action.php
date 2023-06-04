@@ -8,7 +8,6 @@ if (isset($_POST['login'])) {
   $r_username = $_POST['r_userName'];
   $r_pass = $_POST['r_pass'];
 
-  // Prepare the query to prevent SQL injection
   $stmt = $conn->prepare("SELECT * FROM userbase WHERE userName = ? AND pass = ?");
   $stmt->bind_param("ss", $r_username, $r_pass);
   $stmt->execute();
@@ -16,8 +15,8 @@ if (isset($_POST['login'])) {
 
   if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    // Login successful
     $_SESSION["isLoggedIn"] = true;
+    
     $_SESSION["firstName"] = $row["firstName"];
     $_SESSION["lastName"] = $row["lastName"];
     $_SESSION["userName"] = $row["userName"];
@@ -28,7 +27,6 @@ if (isset($_POST['login'])) {
     
     header("Location: index.php");
   } else {
-    // Login failed
     echo "Invalid email or password.";
   }
 

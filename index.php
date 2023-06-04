@@ -66,12 +66,11 @@ Batch : 53rd
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <?php
-          // Check if user is logged in (you should have your own authentication logic here)
-          session_start();
+
+session_start();
           
           if (isset($_SESSION["isLoggedIn"]) == true) {
             $_userName = $_SESSION["firstName"];
-            // Display "Profile" instead of "Login" and "Register" if user is logged in
             echo '
             <li class="nav-item">
               <a class="nav-link" href="cart.php">Cart</a>
@@ -84,7 +83,6 @@ Batch : 53rd
             </li>
           ';
           } else {
-            // Display "Login" and "Register" if user is not logged in
             echo '
           <li class="nav-item">
           <a class="nav-link" href="login.php">Login</a>
@@ -111,12 +109,11 @@ Batch : 53rd
     <h1 class="text-center" style="margin-top:30px;">PRODUCTS</h1>
     <?php
     include "config.php";
-    // Fetch product data from the database
     $sql = "SELECT * FROM crud";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-      echo '<div class="row" style="margin-top:20px">'; // Open the row container
+      echo '<div class="row" style="margin-top:20px">'; 
       while ($row = $result->fetch_assoc()) {
         $image = $row['image'];
         $name = $row['name'];
@@ -148,12 +145,11 @@ Batch : 53rd
         </div>
         <?php
       }
-      echo '</div>'; // Close the row container
+      echo '</div>'; 
     } else {
       echo "No products found.";
     }
 
-    // Close the connection
     $conn->close();
     ?>
   </div>

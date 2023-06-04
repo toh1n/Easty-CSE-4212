@@ -91,11 +91,6 @@
       </div>
       <p class="text-center"><a href="signUp.php">Create an Account</a></p>
       <p class="text-center"><a href="admin_login.php">Login As Admin</a></p>
-
-      <!-- <div class="clearfix">
-            <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
-            <a href="#" class="float-right">Forgot Password?</a>
-        </div>         -->
     </form>
   </div>
 </body>
